@@ -21,3 +21,9 @@ api_basic.add_resource(GetPosts, '/posts')
 
 from server.view.post import GetPostDetail
 api_basic.add_resource(GetPostDetail, '/posts/<int:post_id>')
+
+from server.view.auth import Auth
+api_basic.add_resource(Auth, '/user')
+
+from server.view.login import Login
+api_basic.add_resource(Login, '/user/auth')
